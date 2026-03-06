@@ -1,33 +1,48 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'Introducción'
+description: 'API REST del ERP Semantica — gestión de recursos humanos y logística'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Bienvenido
 
-## Welcome
+La **ERP API de Semantica** expone los módulos del sistema ERP a través de una API REST. Actualmente incluye:
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+- **Auth** — registro e inicio de sesión de usuarios
+- **Recurso Humano** — consulta de empleados
+- **Transporte y Logística** — consulta de guías
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+La URL base es `https://semanticaapi.com.co`.
 
-## Authentication
+## Autenticación
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Todos los endpoints (excepto `/auth/login` y `/auth/register`) requieren un Bearer token en el header `Authorization`.
+
+### Obtener un token
+
+Llama a `POST /auth/login` con tus credenciales:
+
+```bash
+curl -X POST https://semanticaapi.com.co/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email": "usuario@ejemplo.com", "password": "tu_contraseña"}'
+```
+
+Respuesta:
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "bearer"
+}
 ```
+
+### Usar el token
+
+Incluye el token en todas las peticiones posteriores:
+
+```bash
+curl https://semanticaapi.com.co/rhu/empleados/ \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+```
+
+En el playground interactivo de cada endpoint, haz clic en **Authorize** e ingresa el token para probar los endpoints directamente desde el navegador.
