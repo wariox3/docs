@@ -25,36 +25,7 @@
       },
       {
         "tab": "API Reference",
-        "groups": [
-          {
-            "group": "Introducción",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Auth",
-            "openapi": "/api-reference/openapi.json",
-            "pages": [
-              "POST /auth/login",
-              "POST /auth/register"
-            ]
-          },
-          {
-            "group": "Recurso Humano",
-            "openapi": "/api-reference/openapi.json",
-            "pages": [
-              "GET /rhu/empleados"
-            ]
-          },
-          {
-            "group": "Transporte y Logística",
-            "openapi": "/api-reference/openapi.json",
-            "pages": [
-              "GET /tte/guia"
-            ]
-          }
-        ]
+        "openapi": "https://semanticaapi.com.co/openapi.json"
       }
     ],
     "global": {
