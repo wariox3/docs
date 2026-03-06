@@ -11,10 +11,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Guías",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Primeros pasos",
             "pages": [
               "index"
             ]
@@ -22,23 +22,20 @@
         ]
       },
       {
-        "tab": "API Reference",
+        "tab": "Referencia de la API",
+        "groups": [
+          {
+            "group": "Introducción",
+            "pages": ["api-reference/introduction"]
+          }
+        ],
         "openapi": "https://semanticaapi.com.co/openapi.json"
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentación",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png"
   },
   "navbar": {
     "links": [
