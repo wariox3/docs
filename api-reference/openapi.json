@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://semanticaapi.com.co"
+      "url": "https://api.semanticaapi.com.co"
     }
   ],
   "paths": {

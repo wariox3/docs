@@ -29,7 +29,7 @@
             "pages": ["api-reference/introduction"]
           }
         ],
-        "openapi": "https://semanticaapi.com.co/openapi.json"
+        "openapi": "https://api.semanticaapi.com.co/openapi.json"
       }
     ]
   },

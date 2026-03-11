@@ -11,7 +11,7 @@ Esta nueva capa de servicios ha sido desarrollada como una arquitectura no monol
 
 La API está construida sobre FastAPI, proporcionando alto rendimiento, y un modelo de desarrollo moderno orientado a servicios.
 
-La URL base es `https://semanticaapi.com.co`.
+La URL base es `https://api.semanticaapi.com.co`.
 
 ## Autenticación
 
@@ -22,7 +22,7 @@ Todos los endpoints (excepto `/auth/login` y `/auth/register`) requieren un Bear
 Llama a `POST /auth/login` con tus credenciales:
 
 ```bash
-curl -X POST https://semanticaapi.com.co/auth/login \
+curl -X POST https://api.semanticaapi.com.co/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email": "usuario@ejemplo.com", "password": "tu_contraseña"}'
 ```
@@ -41,7 +41,7 @@ Respuesta:
 Incluye el token en todas las peticiones posteriores:
 
 ```bash
-curl https://semanticaapi.com.co/rhu/empleados/ \
+curl https://api.semanticaapi.com.co/rhu/empleados/ \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
